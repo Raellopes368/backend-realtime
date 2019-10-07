@@ -3,9 +3,9 @@ const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
 const cors = require("cors");
-const redisClient = require('async-redis').createClient({
-  password: process.env.DB_KEY,
-});
+// const redisClient = require('async-redis').createClient({
+//   password: process.env.DB_KEY,
+// });
 const redisClient = require('async-redis').createClient(process.env.REDIS_URL);
 const app = express();
 redisClient.set("teste", "teste");
